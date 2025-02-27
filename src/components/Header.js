@@ -5,12 +5,18 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO } from "../utils/constants";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { changeLanguage } from "../utils/configSlice";
+import { LOGO, PROFILE, SUPPORTED_LANG } from "../utils/constants";
+import { useState } from "react";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+
+  const [selectedLanguage, setSelectedLanguage] = useState("");
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (user) => {
@@ -37,17 +43,55 @@ const Header = () => {
       });
   };
 
+  const handleGptSearchClick = () => {
+    dispatch(toggleGptSearchView());
+  };
+
+  const handleLanguageClick = (e) => {
+    setSelectedLanguage(e.target.value);
+    dispatch(changeLanguage(e.target.value));
+  };
+
   return (
     <div className="flex flex-row justify-between absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full">
       <img className="w-44" src={LOGO} alt="logo" />
       {user ? (
-        <div onClick={handleClick} className="flex justify-center items-center">
-          <img
-            src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
-            alt="profile"
-            className="cursor-pointer w-10 h-10"
-          />
-          <p className="text-white pl-5">{user?.displayName?.toUpperCase()}</p>
+        <div className="flex justify-center items-center">
+          <p className="text-white pr-5">{user?.displayName?.toUpperCase()}</p>
+          {showGptSearch && (
+            <div>
+              <select
+                className="p-1 bg-white bg-opacity-80 rounded-lg mr-4 cursor-pointer"
+                onChange={handleLanguageClick}
+                value={selectedLanguage}
+              >
+                {SUPPORTED_LANG.map((item) => (
+                  <option key={item.identifier} value={item.identifier}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+          <div
+            onClick={handleGptSearchClick}
+            className="flex justify-center items-center mr-4 bg-white p-1 rounded-lg bg-opacity-80"
+          >
+            <p className="text-black cursor-pointer font-bold">
+              {showGptSearch ? "🏠 Homepage" : "🔍 GPT Search"}
+            </p>
+          </div>
+          <div
+            onClick={handleClick}
+            className="flex justify-center items-center gap-2 bg-white p-1 rounded-lg bg-opacity-80"
+          >
+            <img
+              src={PROFILE}
+              alt="profile"
+              className="cursor-pointer w-6 h-6 rounded-full"
+            />
+            <p className="text-black cursor-pointer font-bold">Logout</p>
+          </div>
         </div>
       ) : null}
     </div>

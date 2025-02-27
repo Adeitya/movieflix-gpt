@@ -1,4 +1,4 @@
-export const BACKGROUND =
+export const BG_IMG =
   "https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_large.jpg";
 
 export const LOGO =
@@ -12,3 +12,19 @@ export const API_OPTIONS = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YTM4ZjMyNWIwNzczMzYwOWQwYjlhN2I1OTQ5ZTc1ZSIsIm5iZiI6MTc0MDE1NzgxNC45NDMsInN1YiI6IjY3YjhiMzc2YmM4NGQ1NmNiZWJhOTM5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.OMboniHlF-vnvVrLnTr9Kq9Q4VtsjLcaB3bFm7DgMws",
   },
 };
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const PROFILE =
+  "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp";
+
+export const SUPPORTED_LANG = [
+  {
+    identifier: "en",
+    name: "English",
+  },
+  {
+    identifier: "hi",
+    name: "Hindi",
+  },
+];
