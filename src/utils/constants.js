@@ -28,3 +28,8 @@ export const SUPPORTED_LANG = [
     name: "Hindi",
   },
 ];
+
+export const OPENAPI_KEY =
+  "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";
+
+export const GEMINIAPI_KEY = "AIzaSyDeQKnPvgDB_RRgbd2GAf_petHeRWecRZ4";

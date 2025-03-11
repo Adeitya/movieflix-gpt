@@ -7,6 +7,7 @@ const MovieCard = ({ movieDetails }) => {
   const handleClick = () => {
     navigate(`/${movieDetails.id}`);
   };
+  if (!movieDetails.poster_path) return null;
   return (
     <div onClick={handleClick} className="w-32 cursor-pointer">
       <img src={IMG_CDN_URL + movieDetails.poster_path} alt="movie poster" />
