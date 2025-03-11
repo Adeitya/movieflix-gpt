@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/movieflix-gpt/static/css/main.e4a04703.css",
+    "main.js": "/movieflix-gpt/static/js/main.089394fb.js",
+    "static/js/453.6fae82ff.chunk.js": "/movieflix-gpt/static/js/453.6fae82ff.chunk.js",
+    "index.html": "/movieflix-gpt/index.html",
+    "main.e4a04703.css.map": "/movieflix-gpt/static/css/main.e4a04703.css.map",
+    "main.089394fb.js.map": "/movieflix-gpt/static/js/main.089394fb.js.map",
+    "453.6fae82ff.chunk.js.map": "/movieflix-gpt/static/js/453.6fae82ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4a04703.css",
+    "static/js/main.089394fb.js"
+  ]
+}
