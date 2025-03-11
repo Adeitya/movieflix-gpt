@@ -3,7 +3,7 @@ import lang from "../utils/langConstants";
 import { useDispatch, useSelector } from "react-redux";
 import model from "../utils/geminiai";
 import { API_OPTIONS } from "../utils/constants";
-import { addGptMovieResult } from "../utils/gptSlice";
+import { addGptMovieResult, toggleShowLoading } from "../utils/gptSlice";
 
 const GptSearchBar = () => {
   const dispatch = useDispatch();
@@ -34,6 +34,7 @@ const GptSearchBar = () => {
 
   const handleSearch = async () => {
     if (!searchTxt.current.value) return;
+    dispatch(toggleShowLoading());
     const gptQuery =
       "Act as a movie recommendation system & suggest some movies for the query: " +
       searchTxt.current.value +
