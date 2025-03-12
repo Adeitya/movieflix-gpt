@@ -53,11 +53,11 @@ const Header = () => {
   };
 
   return (
-    <div className="flex flex-row justify-between absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full">
+    <div className="flex md:flex-row flex-col md:justify-between items-center absolute md:px-8 px-1 py-2 bg-gradient-to-b from-black z-10 w-full">
       <img className="w-44" src={LOGO} alt="logo" />
       {user ? (
-        <div className="flex justify-center items-center">
-          <p className="text-white pr-5">{user?.displayName?.toUpperCase()}</p>
+        <div className="flex md:gap-2 gap-0 justify-center items-center">
+          <p className="text-white pr-2">{user?.displayName?.toUpperCase()}</p>
           {showGptSearch && (
             <div>
               <select
@@ -83,7 +83,7 @@ const Header = () => {
           </div>
           <div
             onClick={handleClick}
-            className="flex justify-center items-center gap-2 bg-white p-1 rounded-lg bg-opacity-80"
+            className="flex justify-center items-center gap-2 bg-white p-1 rounded-lg bg-opacity-80 md:mt-0"
           >
             <img
               src={PROFILE}

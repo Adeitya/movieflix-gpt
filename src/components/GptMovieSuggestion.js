@@ -13,7 +13,7 @@ const GptMovieSuggestion = () => {
       <ClipLoader color="red" loading={showLoading} size={80} />
     </div>
   ) : (
-    <div className="bg-black text-white bg-opacity-70 mx-14 rounded-md mt-8">
+    <div className="bg-black text-white bg-opacity-70  rounded-md mt-8 w-full">
       {gptMovieNames?.map((item, index) => (
         <MovieList key={item} title={item} movieList={gptMovieResult[index]} />
       ))}

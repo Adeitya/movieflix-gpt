@@ -55,13 +55,13 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-row items-center mt-40 bg-black bg-opacity-70 p-4 w-1/2 rounded-lg">
+    <div className="flex justify-center mx-4 md:mx-0">
+      <div className="flex md:flex-row flex-col md:gap-0 gap-4 items-center md:mt-40 mt-48 bg-black bg-opacity-70 p-4 md:w-1/2 w-full rounded-lg">
         <input
           ref={searchTxt}
           type="text"
           placeholder={lang[langKey].gptSearchPlaceHolder}
-          className="p-2 flex-1 mr-4 rounder-md"
+          className="p-2 flex-1 mr-4 rounder-md w-full m-auto"
           lang={langKey}
           onBlur={() =>
             !searchTxt.current.value

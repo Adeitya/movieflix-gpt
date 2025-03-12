@@ -17,18 +17,24 @@ const MovieDetails = () => {
   useMovieTrailerVideo(movieId);
   return (
     <div className="h-screen flex flex-col">
-      <div className="flex bg-gradient-to-r from-black px-16">
+      <div className="flex justify-between items-center bg-gradient-to-r from-black md:px-16 px-4 py-2">
         <img
           className="w-44 cursor-pointer"
           src={LOGO}
           alt="logo"
           onClick={() => navigate("/browse")}
         />
+        <div
+          onClick={() => navigate("/browse")}
+          className="bg-red-700 rounded-lg  px-4 py-2 cursor-pointer"
+        >
+          <span className="text-black font-bold">🏠 Homepage</span>
+        </div>
       </div>
-      <div className="flex-grow bg-black bg-opacity-70 px-20 py-10">
+      <div className="flex-grow bg-black bg-opacity-70 md:px-20 px-2 py-10">
         <div className="flex justify-between border-b-2 border-red-700 border-solid mb-4">
           <div>
-            <h1 className="text-white text-5xl font-bold">
+            <h1 className="text-white md:text-5xl text-xl font-bold">
               {movieDetails?.original_title}
             </h1>
             <p className="text-gray-400 py-2">
@@ -54,7 +60,7 @@ const MovieDetails = () => {
           <img
             alt="movie poster"
             src={IMG_CDN_URL + movieDetails?.poster_path}
-            className="w-1/4 rounded-lg"
+            className="w-1/4 rounded-lg hidden md:inline-block"
           />
           <iframe
             style={{ pointerEvents: "none" }}
@@ -76,7 +82,7 @@ const MovieDetails = () => {
               </p>
             ))}
           </div>
-          <div className="text-white font-bold">
+          <div className="text-white font-bold text-sm">
             <p>{movieDetails?.overview}</p>
           </div>
         </div>
