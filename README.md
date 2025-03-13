@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# MovieFlixGPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**MovieFlixGPT** is a clone of the popular streaming platform Netflix, enhanced with a unique **GPTSearch** feature powered by AI. This feature allows users to search for movies based on their **mood**, **genre**, or **plot** description, making the search experience more personalized and intuitive. The app leverages **React.js**, **Redux**, **Tailwind CSS**, and integrates with the **TMDB API** for real-time movie data. 
 
-## Available Scripts
+Additionally, users can sign up, log in, and save preferences via **Firebase Authentication**.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **GPTSearch**: Search for movies based on **mood**, **genre**, or **plot** using AI.
+- **Movie Browsing**: Browse through movies and TV shows, similar to Netflix.
+- **Firebase Authentication**: Secure user login, sign-up, and profile management.
+- **Real-Time Data**: Fetch movie data (e.g., titles, ratings, posters) from **TMDB API**.
+- **Responsive Design**: Mobile-friendly, works seamlessly across devices using **Tailwind CSS**.
+- **State Management**: Uses **Redux Toolkit** for efficient state management.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: 
+  - React.js
+  - Redux Toolkit
+  - Tailwind CSS
+  - React Router
+- **Authentication**:
+  - Firebase
+- **API**:
+  - TMDB (The Movie Database) API
+- **Deployment**:
+  - Vercel
 
-### `npm test`
+## Live Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can try out the app here: [MovieFlixGPT - Live Demo](https://movieflix-gpt-sable.vercel.app/)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
