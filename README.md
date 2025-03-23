@@ -1,6 +1,6 @@
 # MovieFlixGPT
 
-**MovieFlixGPT** is a clone of the popular streaming platform Netflix, enhanced with a unique **GPTSearch** feature powered by AI. This feature allows users to search for movies based on their **mood**, **genre**, or **plot** description, making the search experience more personalized and intuitive. The app leverages **React.js**, **Redux**, **Tailwind CSS**, and integrates with the **TMDB API** for real-time movie data. 
+**MovieFlixGPT** is a movie trailer streaming platform , enhanced with a unique **GPTSearch** feature powered by AI. This feature allows users to search for movies based on their **mood**, **genre**, or **plot** description, making the search experience more personalized and intuitive. The app leverages **React.js**, **Redux**, **Tailwind CSS**, and integrates with the **TMDB API** for real-time movie data. 
 
 Additionally, users can sign up, log in, and save preferences via **Firebase Authentication**.
 
