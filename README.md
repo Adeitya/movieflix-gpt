@@ -31,3 +31,9 @@ Additionally, users can sign up, log in, and save preferences via **Firebase Aut
 
 You can try out the app here: [MovieFlixGPT - Live Demo](https://movieflix-gpt-sable.vercel.app/)
 
+## Demo Video
+
+https://github.com/user-attachments/assets/513bd84f-3bc6-4411-88a8-ba3d6e92b92f
+
+
+
